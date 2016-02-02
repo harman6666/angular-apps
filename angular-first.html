@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="js/angular-first.js"></script>
+</head>
+
+<body ng-app="myapp">
+    <div ng-controller="mycntrl">
+        <table>
+        <thead>
+        	<tr>
+        		<td>Name</td>
+        		<td>Like</td>
+        		<td>Dislikes</td>
+        		<td>Like/Dislikes</td>
+        	</tr>
+        </thead>
+        <tbody ng-repeat="technology in technologies">
+        	<tr>
+                <td style="width: 80px">
+                    {{technology.name}}
+                </td>
+                <td style="width: 80px">
+                	{{technology.likes}}
+                </td>
+                <td style="width: 80px">
+                	{{technology.disLikes}}
+                </td>
+                <td style="width: 80px">
+                	<input type="button" value="Like" ng-click="increament(technology)">
+                </td>
+                <td>
+                	<input type="button" value="DisLike" ng-click="decreament(technology)">
+                </td>
+            </tr>
+        </tbody>
+            
+        </table>
+    </div>
+</body>
+
+</html>
